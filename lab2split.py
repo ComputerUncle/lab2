@@ -1,0 +1,53 @@
+
+def main():
+ print("ET0735 (DevOps for AIoT) - Lab 2 - Introduction to Python")
+ display_main_menu()
+ num_list = get_user_input()
+ print("Num list: ",num_list)
+ print ("Average is: ",calc_average(num_list))
+ print ("Min Max is: ", find_min_max(num_list))
+ print ("Sorted data is: ",sort_temperature(num_list))
+ print ("Median is: ",calc_median_temperature(sort_temperature(num_list)))
+
+def get_user_input():
+ list = []
+ newlist = []
+ n = input()
+ list = n.split(",")
+ for i in list:
+  new = float(i)
+  newlist.append(new) 
+  
+
+ return newlist
+ 
+def display_main_menu():
+ print("display_main_menu")
+ print ("Main Menu, input number of value")
+def calc_average(n):
+ avg = sum(n)/len(n)
+ return avg
+
+def find_min_max(n):
+ list = []
+ list.append(min(n))
+ list.append(max(n))
+ return list
+
+def sort_temperature(n):
+ list = n
+ list.sort()
+ return list
+
+def calc_median_temperature(n):
+ x = len(n)
+ mid = x//2
+ if x % 2 == 0:
+  return (n[mid - 1] + n[mid]) / 2
+ else:
+  return n[mid]
+
+if __name__ == "__main__":
+ main()
+
+
