@@ -7,6 +7,8 @@ def main():
  print ("Average is: ",calc_average(num_list))
  print ("Min Max is: ", find_min_max(num_list))
  print ("Sorted data is: ",sort_temperature(num_list))
+ print ("Median is: ",calc_median_temperature(sort_temperature(num_list)))
+
 def get_user_input():
  list = []
  n = int(input())
@@ -34,6 +36,13 @@ def sort_temperature(n):
  list.sort()
  return list
 
+def calc_median_temperature(n):
+ x = len(n)
+ mid = x//2
+ if x % 2 == 0:
+  return (n[mid - 1] + n[mid]) / 2
+ else:
+  return n[mid]
 
 if __name__ == "__main__":
  main()
