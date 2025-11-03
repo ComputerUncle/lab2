@@ -12,8 +12,8 @@ def calculate_bmi(height, weight):
  elif bmi > 25.0:
   print ("User is over weight")
   return 1
-
-weight = float(input())
-height = float(input())
-calculate_bmi(weight, height)
+if __name__ == "__main__":
+ weight = float(input())
+ height = float(input())
+ calculate_bmi(weight, height)
 
